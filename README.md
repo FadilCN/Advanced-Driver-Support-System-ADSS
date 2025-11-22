@@ -15,25 +15,36 @@ Comprehensive computer vision-based ADAS prototype implementing lane detection, 
 
 ---
 
-## 📱 Demo
-
 <img src="images/Picture1.jpg" width="800" height="450"/>
 <img src="images/Picture2.jpg" width="800" height="450"/>
 <img src="images/Picture3.jpg" width="800" height="450"/>
 
-Add your presentation screenshots here after exporting them:
+## 📱 Demo
 
-docs/images/
-├── system_overview.png
-├── lane_detection.png
-├── vehicle_detection.png
-└── demo_result.gif
+**Automatic Headlight Dimming System** - Detects oncoming headlights at night using OpenCV contour detection and brightness thresholding.
 
-text
-undefined
-text
+### Night Driving - No Oncoming Traffic
+![Headlight NOT Detected](images/Picture1.jpg) [attached_image:3]
+
+**Console Output**: `Headlight NOT Detected` - Headlights remain **BRIGHT** for optimal visibility.
+
+### Oncoming Vehicle Detected
+![Headlight Detected](images/Picture2.jpg) [attached_image:2]
+
+**Console Output**: `Headlight Detected` - System automatically **DIMS** headlights to avoid blinding other drivers.
+
+### Real-World Dashboard Demo
+![In-Car Demo](images/Picture3.jpg) [attached_image:1]
+
+**Live Processing**: System running on laptop during actual night driving, processing camera feed in real-time.
 
 ---
+
+### 🧠 How It Works (3-Step Pipeline)
+
+1. **Road ROI Masking** → Focus on driving area, ignore dashboard/hood [attached_image:2]
+2. **Brightness Thresholding** → Detect bright headlight regions (> threshold) [attached_image:2]
+3. **Contour Detection** → Identify and validate oncoming vehicle headlights [attached_image:1][attached_image:2]
 
 ## 🏗️ System Architecture
 
