@@ -39,7 +39,7 @@ The Advanced Driver Support System is an AI-powered device designed to enhance d
 The system captures video frames, converts them to grayscale, and applies a trapezoid-shaped mask to focus on the road. It blurs the image to reduce noise and detects bright contours (oncoming headlights). If a bright light is detected, the system warns the driver or dims the lights.
 
 HTML  
-<img src="1.png" alt="Headlight Detection Output" width="600">
+<img src="images/1.png" alt="Headlight Detection Output" width="600">
 
 **Challenges & Solutions:**  
 - **Problem:** Street lights and shop lights caused false detections.  
@@ -56,8 +56,8 @@ HTML
 The system continuously saves frames. A custom GUI allows the user to select a specific date and time range ("From" and "To") to view the recorded footage as a video.
 
 HTML  
-<img src="2.png" alt="Dashcam User Interface" width="400">
-<img src="2.1.png" alt="Dashcam User Interface" width="400">
+<img src="images/2.png" alt="Dashcam User Interface" width="400">
+<img src="images/2.1.png" alt="Dashcam User Interface" width="400">
 
 **Challenges & Solutions:**  
 - **Problem:** Simultaneous video detection and converting frames to MP4 formats like .mp4 was too resource-intensive for the Pi.  
@@ -81,7 +81,7 @@ $$g_{total} = \sqrt{g_x^2 + g_y^2 + g_z^2}$$
 If an accident is detected, the system extracts footage starting from 3 minutes prior to the incident, compiles it, and sends it via email.
 
 HTML  
-<img src="3.png" alt="Accident Detection Logic" width="500">
+<img src="images/3.png" alt="Accident Detection Logic" width="500">
 
 ---
 
@@ -91,7 +91,7 @@ HTML
 The system loads a database of traffic light coordinates (traffic_lights.txt). It continuously compares the vehicle's live GPS location with these coordinates. If the vehicle is within 300 meters of a light and the speed exceeds 60 km/h, an alert is triggered.
 
 HTML  
-<img src="4.png" alt="Traffic Light Detection Terminal" width="600">
+<img src="images/4.png" alt="Traffic Light Detection Terminal" width="600">
 
 ---
 
@@ -101,14 +101,14 @@ HTML
 The Raspberry Pi acts as the central hub connecting the Camera, Accelerometer, GPS, and Relay.
 
 HTML  
-<img src="5.png" alt="Internal Circuit Diagram" width="600">
-<img src="5.1.png" alt="Internal Circuit Diagram" width="600">
+<img src="images/5.png" alt="Internal Circuit Diagram" width="600">
+<img src="images/5.1.png" alt="Internal Circuit Diagram" width="600">
 
 ### External Wiring
 Shows the connection between the 12V Car Battery, the Buck Converter, the Relay, and the Headlights.
 
 HTML  
-<img src="6.png" alt="External Wiring Diagram" width="600">
+<img src="images/6.png" alt="External Wiring Diagram" width="600">
 
 ---
 
